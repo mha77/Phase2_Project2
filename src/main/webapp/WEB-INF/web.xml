@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+ <display-name>Basic Struts2</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+    	<listener-class>com.markus.listener.ContextListener</listener-class>
+  	</listener>
+	<context-param>
+    	<param-name>url</param-name>
+    	<param-value>jdbc:mariadb://192.168.178.2:3306/</param-value>
+  	</context-param>
+  	<context-param>
+  		<param-name>database</param-name>
+  		<param-value>simplilearn</param-value>
+  	</context-param>
+  	<context-param>
+  		<param-name>user_name</param-name>
+  		<param-value>markus</param-value>
+  	</context-param>
+  	<context-param>
+  		<param-name>password</param-name>
+  		<param-value>VrSsurL97xt</param-value>
+  	</context-param>
+</web-app>
